@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="An application to assist users in keeping track of their shopping list">
+  <meta name="keywords" content="ashvin, motye, ashvin motye, web developer mauritius, software developer mauritius, shopping app, shopping tracker, shopping cart tracker">
+
+  <title>Shopping Assist | Ashvin Motye</title>
+  <link rel="shortcut icon" href="icon.png" type="image/png">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+ 
+
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112790540-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112790540-1');
+  </script>
+</head>
+<body>
+
+  <div class="modal">
+    <form id="edit-cart" onsubmit="return false;">
+      <label for="item-name">Item</label>
+      <input required type="text" name="item-name" id="item-name" placeholder="Item">
+
+      <label for="item-count">Units</label>
+      <input required type="number" name="item-count" id="item-count" placeholder="Units" min="0">
+
+      <label for="item-price">Unit price</label>
+      <input required type="number" name="item-price" id="item-price"  placeholder="Price" min="0.01" step="0.01">
+
+      <input type="hidden" name="item-index">
+
+      <input type="submit" value="Update">
+    </form>
+  </div>
+
+  <div class="container">
+
+    <header>
+      <h1>Shopping Cart</h1>
+      <p>To delete an item, tap on 'Edit' and set item units to 0.</p>
+    </header>
+    
+    <div class="all-items"></div>
+
+    <div class="form">
+      <form id="add-to-cart" onsubmit="return false;">
+        <input required type="text" name="item-name" placeholder="Item">
+        <input required type="number" name="item-count" placeholder="Units" min="0">
+        <input required type="number" name="item-price" placeholder="Price" min="0.01" step="0.01">
+        <input type="submit" value="Add">
+      </form>
+    </div>
+
+    <div class="summary">
+      <h1><span class="summary-desc">Items</span><span id="totalItems">0</span></h1>
+      <h1><span class="summary-desc">Units</span><span id="totalUnits">0</span></h1>
+      <h1><span class="summary-desc">Total</span><span id="totalAmount">0</span></h1>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

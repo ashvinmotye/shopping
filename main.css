@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fbfbfb;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  margin-bottom: 20px;
+  color: #444444;
+}
+
+header p {
+  font-size: 11px;
+}
+
+.item {
+  color: #444444;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 5px;
+}
+
+.title h2 {
+  font-weight: 400;
+  font-size: 1.2em;
+  width: 60%;
+}
+
+.title p {
+  color: #989898;
+  font-size: 0.9em;
+}
+
+.total {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  font-size: 1.5em;
+}
+
+.edit {
+  font-size: 10px;
+  margin-left: 5px;
+  background-color: #03A9F4;
+  padding: 2px 7px;
+  border-radius: 5px;
+  color: #eeeeee;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+#add-to-cart {
+  text-align: center;
+}
+
+#add-to-cart input[type='text'] {
+  width: 50%;
+}
+
+#add-to-cart input[type='number'],
+#add-to-cart input[type='submit'] {
+  width: 15%;
+}
+
+input[type='submit'] {
+  background-color: #03a9f4;
+  color: #eeeeee;
+  border: 1px solid #03a9f4;
+}
+
+input {
+  padding: 6px 4px;
+  outline: none;
+  border: 1px solid #989898;
+  color: #444444;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #03a9f4;
+}
+
+.summary {
+  margin-top: 20px;
+}
+
+.summary h1 {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #eeeeee;
+  text-align: right;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  background-color: #03a9f4;
+  border-radius: 5px;
+  position: relative;
+}
+
+.summary .summary-desc {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+}
+
+.summary span[id] {
+  font-size: 1.8em;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.modal label {
+  color: #eeeeee;
+  font-size: 12px;
+}
+
+#edit-cart {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  position: relative;
+  transition: transform 0.3s ease;
+  transform: translateY(-100%);
+}
+
+#edit-cart.show {
+  transform: translateY(0%);
+}
+
+#edit-cart input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#edit-cart input[type='submit'] {
+  margin-top: 32px;
+}
