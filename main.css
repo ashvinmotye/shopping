@@ -138,11 +138,13 @@ input:focus {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 2;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .modal label {
   color: #eeeeee;
   font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #edit-cart {
