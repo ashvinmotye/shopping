@@ -12,6 +12,8 @@ window.onload = function() {
       cart[i].getAmount = getAmount;
       appendItem(cart[i]);
     }
+
+    updatePageTotal();
   }
 };
 
