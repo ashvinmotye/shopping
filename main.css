@@ -195,4 +195,5 @@ input:focus {
 .instructions p {
   margin-top: 10px;
   font-size: 11px;
+  color: #444444;
 }
